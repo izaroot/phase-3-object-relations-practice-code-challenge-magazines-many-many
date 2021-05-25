@@ -12,7 +12,7 @@ class Magazine < ActiveRecord::Base
 
     def self.most_popular
         sub_count = 0
-        best_magzine = {}
+        best_magazine = {}
         self.all.each do |magazine|
             if magazine.subscriptions.count >= sub_count
                 sub_count = magazine.subscriptions.count
@@ -20,6 +20,6 @@ class Magazine < ActiveRecord::Base
             end
         end
         puts sub_count
-        best_magzine
+        best_magazine
     end
 end
